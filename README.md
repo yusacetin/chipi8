@@ -1,6 +1,6 @@
 # Chipi8 CHIP-8 Emulator
 
-A simple CHIP-8 emulator written in Rust and TypeScript with Tauri.
+A simple CHIP-8 emulator written in Rust and Svelte/TypeScript with Tauri.
 
 ## Keyboard mapping
 
