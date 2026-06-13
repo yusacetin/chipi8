@@ -1,4 +1,5 @@
 <script lang="ts">
+    import {onMount} from "svelte";
     import {game_status, settings} from "$lib/state.svelte";
     import {open} from "@tauri-apps/plugin-dialog";
     import {getCurrentWindow, LogicalSize} from "@tauri-apps/api/window";
@@ -26,6 +27,11 @@
         const height = settings.height * settings.scale;
         await getCurrentWindow().setSize(new LogicalSize(width, height));
     }
+
+    // Fixes window sizing issue on GNOME desktop
+    onMount(() => {
+        updateScale();
+    });
 </script>
 
 <div class="overlay">
