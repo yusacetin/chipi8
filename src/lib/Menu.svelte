@@ -3,10 +3,14 @@
     import {open} from "@tauri-apps/plugin-dialog";
     import {invoke} from "@tauri-apps/api/core";
     import {getCurrentWindow, LogicalSize} from "@tauri-apps/api/window";
+    import {start_sound, stop_sound} from "$lib/audio.ts";
 
     async function unpause() {
         await invoke("send_key_event", {key: 0x11, isPressed: true});
         game_status.view = "running";
+        if (game_status.sound_active) {
+            start_sound();
+        }
     }
 
     async function updateSpeed() {

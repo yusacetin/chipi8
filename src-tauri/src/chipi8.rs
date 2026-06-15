@@ -148,6 +148,9 @@ impl Chipi8 {
                 }
                 if self.st > 0 {
                     self.st -= 1;
+                    if self.st == 0 {
+                        app_handle.emit("play-sound", false).expect("Failed to emit sound stop event");
+                    }
                 }
                 loop_counter = 0;
             }
@@ -490,6 +493,13 @@ impl Chipi8 {
                 if lsb == 0x18 {
                     // Set sound timer = Vx
                     self.st = self.reg[x];
+
+                    // Play sound if sound timer > 1
+                    // This should be processed here rather than at the top level because doing so at the top level
+                    // would send many redundant events to the frontend every cycle when sound is active
+                    if self.st > 1 {
+                        app_handle.emit("play-sound", true).expect("Failed to emit sound start event");
+                    }
                     continue;
                 }
 

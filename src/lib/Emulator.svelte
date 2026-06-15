@@ -3,15 +3,20 @@
     import {listen} from "@tauri-apps/api/event";
     import {invoke} from "@tauri-apps/api/core";
     import {settings, game_status} from "$lib/state.svelte";
+    import {initialize_audio, start_sound, stop_sound} from "$lib/audio.ts";
 
     let canvas: HTMLCanvasElement;
     let unlisten: () => void;
+    let unlisten_sound: () => void;
 
     onMount(async () => {
         const ctx = canvas.getContext("2d");
         if (!ctx) {
             return;
         }
+
+        game_status.sound_active = false;
+        initialize_audio();
 
         unlisten = await listen<Uint8Array>("draw-display", (event) => {
             if (game_status.view == "paused") {
@@ -29,6 +34,15 @@
                     const y = Math.floor(i / settings.width);
                     ctx.fillRect(x * settings.scale, y * settings.scale, settings.scale, settings.scale);
                 }
+            }
+        });
+
+        unlisten_sound = await listen<boolean>("play-sound", (event) => {
+            game_status.sound_active = event.payload;
+            if (game_status.sound_active) {
+                start_sound();
+            } else {
+                stop_sound();
             }
         });
 

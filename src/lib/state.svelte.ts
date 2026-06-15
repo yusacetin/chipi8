@@ -11,5 +11,6 @@ export const game_status = $state({
     view: "welcome" as "welcome" | "running" | "paused",
     rom_loaded: false,
     rom_fpath: "",
-    session: 0
+    session: 0,
+    sound_active: false
 });
