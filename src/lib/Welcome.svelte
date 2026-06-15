@@ -58,8 +58,7 @@
     .overlay {
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(4px);
+        background: #0A0A0A;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -67,9 +66,11 @@
     }
 
     .menu-card {
-        background: #1A1A1A;
-        padding: 2rem;
-        border-radius: 8px;
+        background: #181818;
+        padding: 20px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 16px;
         color: white;
         text-align: center;
     }
@@ -89,7 +90,6 @@
         padding-right: 10px;
         padding-left: 10px;
         color: #FAFAFA;
-        margin: 0.1em;
     }
 
     button:hover {
