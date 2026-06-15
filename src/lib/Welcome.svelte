@@ -114,6 +114,7 @@
         background-color: #28282A;
         color: #FAFAFA;
         font-family: "Noto Sans", sans-serif;
+        min-width: 4rem;
     }
 
     input[type="number"]:focus {
