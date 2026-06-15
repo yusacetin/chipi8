@@ -72,7 +72,7 @@
     .overlay {
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(8px);
         display: flex;
         justify-content: center;
