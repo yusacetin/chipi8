@@ -3,7 +3,7 @@
     import {open} from "@tauri-apps/plugin-dialog";
     import {invoke} from "@tauri-apps/api/core";
     import {getCurrentWindow, LogicalSize} from "@tauri-apps/api/window";
-    import {start_sound, stop_sound} from "$lib/audio.ts";
+    import {start_sound} from "$lib/audio";
 
     async function unpause() {
         await invoke("send_key_event", {key: 0x11, isPressed: true});

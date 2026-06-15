@@ -3,7 +3,7 @@
     import {listen} from "@tauri-apps/api/event";
     import {invoke} from "@tauri-apps/api/core";
     import {settings, game_status} from "$lib/state.svelte";
-    import {initialize_audio, start_sound, stop_sound} from "$lib/audio.ts";
+    import {initialize_audio, start_sound, stop_sound} from "$lib/audio";
 
     let canvas: HTMLCanvasElement;
     let unlisten: () => void;
@@ -54,6 +54,10 @@
 
         if (unlisten) {
             unlisten();
+        }
+
+        if (unlisten_sound) {
+            unlisten_sound();
         }
     });
 </script>
