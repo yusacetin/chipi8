@@ -11,6 +11,8 @@ A simple CHIP-8 emulator written in Rust and Svelte/TypeScript with Tauri.
 | A, S, D, F | 7, 8, 9, E  |
 | Z, X, C, V | A, 0, B, F  |
 
+You can press the `Esc` key to open the pause menu.
+
 ## Screenshots
 
 ![Welcome screen](screenshots/screenshot_welcome.png)
