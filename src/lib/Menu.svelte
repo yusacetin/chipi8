@@ -50,7 +50,7 @@
 
         <div class="row">
             <span>Speed: </span> 
-            <input type="number" min="1" max="50" bind:value={settings.speed} onchange="{updateSpeed}"/>
+            <input type="number" min="1" max="99" bind:value={settings.speed} onchange="{updateSpeed}"/>
         </div>
 
         <div class="row">

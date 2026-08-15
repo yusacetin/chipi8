@@ -4,7 +4,7 @@ export const settings = $state({
     height: 32,
     background: "#0A0A0A",
     foreground: "#FAFAFA",
-    speed: 2
+    speed: 10
 });
 
 export const game_status = $state({
