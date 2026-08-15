@@ -139,4 +139,16 @@
     span {
         font-size: 20px;
     }
+
+    /* Prevent text selection globally across the entire page */
+    * {
+        user-select: none;
+        -webkit-user-select: none; /* Safari / older WebKit */
+    }
+
+    /* Allow text selection inside input fields and editable areas */
+    input {
+        user-select: text;
+        -webkit-user-select: text;
+    }
 </style>

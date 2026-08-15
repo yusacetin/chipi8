@@ -35,9 +35,21 @@
             invoke("send_key_event", {key, isPressed});
         }
     }
+
+    function handleContextMenu(e: MouseEvent) {
+        const target = e.target;
+        if (!(target instanceof HTMLElement)) {
+            e.preventDefault();
+            return;
+        }
+        if (!(target.tagName == "input" || target.tagName == "INPUT")) {
+            e.preventDefault();
+        }
+    }
 </script>
 
 <svelte:window
+    oncontextmenu={(e) => handleContextMenu(e)}
     onkeydown={(e) => handleKey(e, true)}
     onkeyup={(e) => handleKey(e, false)}
 />
