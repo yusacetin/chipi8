@@ -28,7 +28,7 @@ struct EmulatorState {
 
 #[tauri::command]
 fn run_emulator(rom_fpath: String, speed: u32, app: AppHandle, state: State<'_, EmulatorState>) {
-    println!("Rom: {rom_fpath}");
+    //println!("ROM: {rom_fpath}");
     let (tx, rx) = channel::<EmulatorCommand>();
     if let Ok(mut guard) = state.tx.lock() {
         *guard = Some(tx);
