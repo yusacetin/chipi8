@@ -32,7 +32,9 @@
 
 <div class="overlay">
     <div class="menu-card">
-        <h1>Chipi8 CHIP-8 Emulator</h1>
+        <div class="title">Chipi8</div>
+        
+        <div class="subtitle">CHIP-8 Emulator</div>
 
         <div class="row">
             <span>Speed: </span>
@@ -75,6 +77,16 @@
         margin: 16px;
     }
 
+    .title {
+        font-size: 70px;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        margin-bottom: 32px;
+    }
+
     button {
         font-size: 20px;
         font-family: "Noto Sans", sans-serif;
@@ -94,10 +106,6 @@
 
     button:active {
         background-color: #626262;
-    }
-
-    h1 {
-        font-size: 36px;
     }
 
     input[type="number"] {
