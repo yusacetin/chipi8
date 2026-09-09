@@ -78,7 +78,7 @@
     }
 
     .title {
-        font-size: 70px;
+        font-size: 64px;
         font-weight: bold;
     }
 
