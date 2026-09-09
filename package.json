@@ -1,7 +1,7 @@
 {
-  "name": "chipi8",
+  "name": "Chipi8",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal CHIP-8 emulator",
   "type": "module",
   "scripts": {
     "dev": "vite dev",

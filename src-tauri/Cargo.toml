@@ -1,8 +1,8 @@
 [package]
-name = "chipi8"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+name = "Chipi8"
+version = "1.0.0"
+description = "A minimal CHIP-8 emulator"
+authors = ["yusacetin"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

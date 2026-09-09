@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "chipi8",
+  "productName": "Chipi8",
   "version": "1.0.0",
   "identifier": "org.yusacetin.chipi8",
   "build": {
