@@ -29,11 +29,7 @@
 
     async function changeRom() {
         const choice = await open({
-            multiple: false,
-            filters: [{
-                name: "CHIP-8 ROM",
-                extensions: ["ch8"]
-            }]
+            multiple: false
         });
 
         if (choice && typeof choice === "string") {
